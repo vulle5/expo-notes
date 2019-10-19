@@ -4,11 +4,16 @@ const styles = StyleSheet.create({
   app: {
     margin: 16
   },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  header: {
+    fontSize: 32,
+    marginVertical: 8
+  },
+  newNote: {
     alignItems: 'center',
-    justifyContent: 'center'
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 4
   }
 });
 

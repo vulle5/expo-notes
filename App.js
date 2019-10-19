@@ -3,8 +3,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import Home from './components/Home';
 
-// import styles from './styles/appStyles';
-
 // let notes = [
 //   {
 //     id: 1,
