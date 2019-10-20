@@ -47,13 +47,13 @@ const Home = () => {
       }}
     >
       <Text style={styles.header}>Notes</Text>
+      <NoteCardList notes={notes} />
       <TouchableHighlight
         onPress={() => console.log('Hello')}
         style={styles.newNote}
       >
         <Text style={styles.text}>New Note</Text>
       </TouchableHighlight>
-      <NoteCardList notes={notes} />
     </View>
   );
 };

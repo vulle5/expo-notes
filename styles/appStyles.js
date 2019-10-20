@@ -2,10 +2,11 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   app: {
-    margin: 16
+    margin: 12
   },
   header: {
     fontSize: 32,
+    fontWeight: 'bold',
     marginVertical: 8
   },
   header2: {
@@ -41,5 +42,10 @@ export const noteCardStyles = StyleSheet.create({
     borderRadius: 4,
     marginVertical: 8,
     padding: 8
+  },
+  deleteButton: {
+    position: 'absolute',
+    right: 0,
+    margin: 8
   }
 });
