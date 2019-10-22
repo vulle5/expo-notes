@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, TouchableHighlight } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 import { styles } from '../styles/appStyles';
@@ -32,7 +32,7 @@ let notes = [
   }
 ];
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const insets = useSafeArea();
 
   return (
@@ -49,7 +49,7 @@ const Home = () => {
       <Text style={styles.header}>Notes</Text>
       <NoteCardList notes={notes} />
       <TouchableHighlight
-        onPress={() => console.log('Hello')}
+        onPress={() => navigation.navigate('NewNote')}
         style={styles.newNote}
       >
         <Text style={styles.text}>New Note</Text>
