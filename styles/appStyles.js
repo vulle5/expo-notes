@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
   app: {
@@ -16,6 +17,13 @@ export const styles = StyleSheet.create({
   text: {
     fontSize: 16
   },
+  transparentContainer: {
+    flex: 1,
+    paddingTop: Platform.OS === 'ios' ? 60 : 80
+  }
+});
+
+export const appStyles = StyleSheet.create({
   newNote: {
     alignItems: 'center',
     padding: 10,
@@ -23,16 +31,6 @@ export const styles = StyleSheet.create({
     borderColor: '#000',
     borderRadius: 4,
     marginTop: 12
-  }
-});
-
-export const newNoteStyles = StyleSheet.create({
-  newNote: {
-    alignItems: 'center',
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#000',
-    borderRadius: 4
   }
 });
 

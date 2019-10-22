@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import { View, Text } from 'react-native';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 import { styles } from '../styles/appStyles';
 import NoteCardList from './NoteCardList';
+import NoteButton from './NoteButton';
 
 let notes = [
   {
@@ -48,12 +49,10 @@ const Home = ({ navigation }) => {
     >
       <Text style={styles.header}>Notes</Text>
       <NoteCardList notes={notes} />
-      <TouchableHighlight
+      <NoteButton
         onPress={() => navigation.navigate('NewNote')}
-        style={styles.newNote}
-      >
-        <Text style={styles.text}>New Note</Text>
-      </TouchableHighlight>
+        title="New Note"
+      />
     </View>
   );
 };
